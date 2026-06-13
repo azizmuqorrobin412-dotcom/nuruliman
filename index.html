@@ -1,0 +1,1950 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>
+      YAPINI - Yayasan Pendidikan Islam Nurul Iman | Unggul,
+      Agamis & Modern
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Situs Resmi Yayasan Pendidikan Islam Nurul Iman (YAPINI). Pendidikan modern berstandar internasional berbasis karakter Islami, sains, dan bahasa asing."
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.435.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            colors: {
+              yapini: {
+                emeraldDark:
+                  '#042916' /* Hijau botol super mewah */,
+                emeraldMedium:
+                  '#0D5C34' /* Hijau emerald logo */,
+                emeraldLight:
+                  '#10B981' /* Hijau neon aksen terang */,
+                royalBlue:
+                  '#1E40AF' /* Biru royal elegan */,
+                skyBlue:
+                  '#3B82F6' /* Biru aksen fungsional */,
+                goldAccent:
+                  '#F59E0B' /* Emas mewah penunjang */,
+                neutralDark:
+                  '#0A0F0D' /* Hitam matte premium */,
+                neutralBg:
+                  '#F3F7F5' /* Off-white sejuk lembut */,
+                glassBg: 'rgba(4, 41, 22, 0.85)',
+              },
+            },
+            animation: {
+              'float-slow':
+                'floatSlow 8s ease-in-out infinite',
+              'float-delayed':
+                'floatDelayed 10s ease-in-out infinite',
+              'pulse-glow':
+                'pulseGlow 3s ease-in-out infinite',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* MENCEGAH SCROLLBAR HORIZONTAL PADA SELURUH PERANGKAT */
+      html,
+      body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* CSS Animasi Khusus untuk Efek "Tidak Membosankan" */
+      @keyframes floatSlow {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-20px) scale(1.05);
+        }
+      }
+      @keyframes floatDelayed {
+        0%,
+        100% {
+          transform: translateY(0) scale(1.05);
+        }
+        50% {
+          transform: translateY(20px) scale(0.95);
+        }
+      }
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      /* Custom scrollbar mewah */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #042916;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #10b981;
+        border-radius: 99px;
+        border: 2px solid #042916;
+      }
+
+      /* Efek Kartu 3D Flip */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .card-inner {
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .card-flipped {
+        transform: rotateY(180deg);
+      }
+      .card-front,
+      .card-back {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-yapini-neutralBg text-slate-800 font-sans antialiased"
+  >
+    <!-- ORNAMEN BACKGROUND LUMINOUS (Membatasi orbs agar tidak memicu scroll kanan-kiri) -->
+    <div
+      class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 max-w-full"
+    >
+      <div
+        class="absolute top-[10%] -left-[10%] w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] rounded-full bg-yapini-emeraldMedium/15 blur-[80px] sm:blur-[150px] animate-float-slow"
+      ></div>
+      <div
+        class="absolute top-[40%] -right-[10%] w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] rounded-full bg-yapini-skyBlue/10 blur-[70px] sm:blur-[130px] animate-float-delayed"
+      ></div>
+      <div
+        class="absolute bottom-[20%] left-[20%] w-[350px] sm:w-[700px] h-[350px] sm:h-[700px] rounded-full bg-yapini-goldAccent/5 blur-[90px] sm:blur-[180px] animate-float-slow"
+      ></div>
+    </div>
+
+    <!-- RESPONSIVE NAVBAR: MOBILE (SOLID HIJAU TUA) & DESKTOP (FLOATING GLASSMORPHIC) -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 rounded-none border-b border-white/10 bg-yapini-emeraldDark shadow-lg lg:top-4 lg:left-1/2 lg:-translate-x-1/2 lg:w-[92%] lg:max-w-7xl lg:rounded-2xl lg:bg-yapini-glassBg lg:backdrop-blur-md lg:shadow-2xl transition-all duration-300 py-3 px-6 flex justify-between items-center"
+      id="main-header"
+    >
+      <!-- Logo Area - Clean & Elegan -->
+      <a href="#" class="flex items-center group">
+        <img
+          src="logosekolah.png"
+          alt="Logo YAPINI"
+          class="h-[70px] md:h-15 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
+          onerror="
+            this.src =
+              'https://placehold.co/180x50/0D5C34/ffffff?text=YAPINI'
+          "
+        />
+      </a>
+
+      <!-- Navigasi Utama Desktop -->
+      <nav
+        class="hidden lg:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase"
+      >
+        <a
+          href="#tentang"
+          class="text-white/90 hover:text-yapini-emeraldLight transition-colors duration-200"
+          >Profil</a
+        >
+        <a
+          href="#wisdom"
+          class="text-white/90 hover:text-yapini-emeraldLight transition-colors duration-200"
+          >Adab</a
+        >
+        <a
+          href="#kegiatan"
+          class="text-white/90 hover:text-yapini-emeraldLight transition-colors duration-200"
+          >Kehidupan Siswa</a
+        >
+        <a
+          href="#prestasi"
+          class="text-white/90 hover:text-yapini-emeraldLight transition-colors duration-200"
+          >Prestasi</a
+        >
+        <a
+          href="#fasilitas"
+          class="text-white/90 hover:text-yapini-emeraldLight transition-colors duration-200"
+          >Fasilitas</a
+        >
+        <a
+          href="#penerimaan"
+          class="text-yapini-emeraldLight hover:text-white transition-colors duration-200 flex items-center gap-1.5 font-bold"
+        >
+          <span
+            class="w-2 h-2 bg-red-500 rounded-full animate-ping"
+          ></span>
+          <span>PPDB 2026/2027</span>
+        </a>
+      </nav>
+
+      <!-- CTA Aksi Kanan (Desktop) -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a
+          href="https://wa.me/6281336724198?text=Assalamu'alaikum%20Admin%20YAPINI%2C%20saya%20ingin%20bertanya%20informasi%20pendaftaran."
+          target="_blank"
+          class="text-xs font-bold text-white flex items-center gap-1.5 hover:text-yapini-emeraldLight transition-colors"
+        >
+          <i
+            data-lucide="message-circle"
+            class="w-4.5 h-4.5 text-yapini-emeraldLight"
+          ></i>
+          <span>Tanya Admin</span>
+        </a>
+        <a
+          href="#kontak"
+          class="bg-gradient-to-r from-yapini-emeraldMedium to-yapini-emeraldLight text-white px-5 py-2.5 rounded-xl text-xs font-bold tracking-widest uppercase shadow-lg shadow-yapini-emeraldDark/30 hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5"
+        >
+          Daftar Online
+        </a>
+      </div>
+
+      <!-- Tombol Menu Hamburger Khas Pojok Kanan Atas (Ganti ke SVG murni agar tampil instan di HP) -->
+      <button
+        onclick="toggleMobileMenu()"
+        class="lg:hidden p-2 text-white hover:bg-white/10 rounded-xl transition-colors focus:outline-none"
+        aria-label="Buka Menu"
+      >
+        <svg
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </header>
+
+    <!-- MOBILE DRAWER (Diperbarui dengan Latar Belakang 88% Opacity + Efek Blur) -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-[#042916]/[0.88] backdrop-blur-md z-50 transform translate-x-full invisible transition-all duration-500 ease-in-out lg:hidden flex flex-col justify-between p-8"
+    >
+      <div
+        class="flex justify-between items-center border-b border-white/10 pb-6"
+      >
+        <img
+          src="logosekolah.png"
+          alt="Logo YAPINI"
+          class="h-[60px] w-auto object-contain"
+          onerror="
+            this.src =
+              'https://placehold.co/150x40/0D5C34/ffffff?text=YAPINI'
+          "
+        />
+        <button
+          onclick="toggleMobileMenu()"
+          class="text-white p-2 hover:bg-white/20 rounded-full transition-colors focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav
+        class="flex flex-col space-y-6 my-auto text-center text-lg tracking-wider font-semibold"
+      >
+        <a
+          href="#tentang"
+          onclick="toggleMobileMenu()"
+          class="text-white/85 hover:text-yapini-emeraldLight transition-colors"
+          >Profil Sekolah</a
+        >
+        <a
+          href="#wisdom"
+          onclick="toggleMobileMenu()"
+          class="text-white/85 hover:text-yapini-emeraldLight transition-colors"
+          >Mutiara Adab</a
+        >
+        <a
+          href="#kegiatan"
+          onclick="toggleMobileMenu()"
+          class="text-white/85 hover:text-yapini-emeraldLight transition-colors"
+          >Aktivitas Siswa</a
+        >
+        <a
+          href="#prestasi"
+          onclick="toggleMobileMenu()"
+          class="text-white/85 hover:text-yapini-emeraldLight transition-colors"
+          >Prestasi</a
+        >
+        <a
+          href="#fasilitas"
+          onclick="toggleMobileMenu()"
+          class="text-white/85 hover:text-yapini-emeraldLight transition-colors"
+          >Sarana</a
+        >
+        <a
+          href="#penerimaan"
+          onclick="toggleMobileMenu()"
+          class="text-yapini-emeraldLight font-bold"
+          >Biaya & Pendaftaran</a
+        >
+      </nav>
+      <div
+        class="border-t border-white/10 pt-6 text-center text-xs space-y-4"
+      >
+        <p class="text-slate-300">
+          Pusat Informasi PPDB YAPINI:
+        </p>
+        <p class="font-bold text-white text-base">
+          WhatsApp: 0821-2489-0162
+        </p>
+        <a
+          href="#kontak"
+          onclick="toggleMobileMenu()"
+          class="block w-full bg-gradient-to-r from-yapini-emeraldMedium to-yapini-emeraldLight text-white py-3.5 rounded-xl font-bold uppercase tracking-widest"
+          >Daftar Sekarang</a
+        >
+      </div>
+    </div>
+
+    <!-- HERO SECTION (Dengan Latar Belakang Foto Sekolah Menawan & Overlay yang Sangat Terbaca) -->
+    <section
+      class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden"
+    >
+      <!-- Background Image Container -->
+      <div
+        class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('gurunuruliman.jpg')"
+      ></div>
+      <!-- Dark Emerald Elegant Overlay -->
+      <div
+        class="absolute inset-0 z-0 bg-gradient-to-b from-yapini-neutralDark/95 via-yapini-emeraldDark/90 to-yapini-neutralDark/95"
+      ></div>
+      <!-- Dot Grid Pattern Overlay -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none z-0"
+      ></div>
+
+      <div
+        class="container mx-auto px-6 relative z-10 py-16 text-center max-w-5xl"
+      >
+        <!-- Badge Sambutan Eksklusif -->
+        <div
+          class="inline-flex items-center gap-2 bg-yapini-emeraldLight/10 border border-yapini-emeraldLight/30 px-5 py-2 rounded-full mb-8 animate-pulse-glow"
+        >
+          <span
+            class="w-2.5 h-2.5 bg-yapini-emeraldLight rounded-full"
+          ></span>
+          <span
+            class="text-[10px] md:text-xs tracking-widest uppercase font-bold text-yapini-emeraldLight"
+            >Penerimaan Siswa Baru Angkatan 2026/2027</span
+          >
+        </div>
+
+        <!-- Judul Utama Dramatis -->
+        <h1
+          class="font-display text-4xl sm:text-6xl md:text-8xl font-extrabold text-white leading-tight tracking-tight mb-8"
+        >
+          Mendidik Pemimpin <br />
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-yapini-emeraldLight via-teal-300 to-yapini-skyBlue"
+            >Masa Depan Dunia</span
+          >
+        </h1>
+
+        <p
+          class="text-slate-300 font-light text-sm md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
+        >
+          Yayasan Pendidikan Islam Nurul Iman menyatukan
+          keteguhan akhlak Al-Qur'an dengan kedalaman sains
+          modern dan kefasihan bahasa internasional.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            href="#penerimaan"
+            class="w-full sm:w-auto bg-gradient-to-r from-yapini-emeraldLight to-teal-500 text-yapini-emeraldDark font-bold tracking-widest text-xs uppercase px-10 py-5 rounded-xl shadow-lg shadow-yapini-emeraldLight/25 transition-transform duration-300 hover:-translate-y-1"
+          >
+            Hitung Simulasi Biaya
+          </a>
+          <a
+            href="#tentang"
+            class="w-full sm:w-auto border border-white/20 hover:border-yapini-emeraldLight text-white px-10 py-5 text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-white/5 transition-all duration-300"
+          >
+            Pelajari Profil Sekolah
+          </a>
+        </div>
+
+        <!-- Stats Ringkas -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-24 pt-12 border-t border-white/10"
+        >
+          <div>
+            <p
+              class="font-display text-3xl md:text-5xl font-extrabold text-yapini-emeraldLight"
+            >
+              A
+            </p>
+            <p
+              class="text-[9px] tracking-widest uppercase text-slate-400 mt-2"
+            >
+              Akreditasi Sempurna
+            </p>
+          </div>
+          <div class="border-l border-white/10">
+            <p
+              class="font-display text-3xl md:text-5xl font-extrabold text-white"
+            >
+              40+
+            </p>
+            <p
+              class="text-[9px] tracking-widest uppercase text-slate-400 mt-2"
+            >
+              Pendidik Bersertifikasi
+            </p>
+          </div>
+          <div class="border-l border-white/10">
+            <p
+              class="font-display text-3xl md:text-5xl font-extrabold text-white"
+            >
+              15+
+            </p>
+            <p
+              class="text-[9px] tracking-widest uppercase text-slate-400 mt-2"
+            >
+              Ekstrakurikuler Unggulan
+            </p>
+          </div>
+          <div class="border-l border-white/10">
+            <p
+              class="font-display text-3xl md:text-5xl font-extrabold text-yapini-goldAccent"
+            >
+              150+
+            </p>
+            <p
+              class="text-[9px] tracking-widest uppercase text-slate-400 mt-2"
+            >
+              Prestasi Tingkat Nasional
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE "DAILY ADAB & MOTIVATION" SECTION (Anti-Boring Flip Card) -->
+    <section
+      id="wisdom"
+      class="py-24 bg-yapini-emeraldDark relative overflow-hidden"
+    >
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        >
+          <!-- Sisi Kiri: Deskripsi Penjelasan -->
+          <div class="lg:col-span-5 space-y-6">
+            <span
+              class="text-yapini-emeraldLight uppercase tracking-[0.25em] text-xs font-bold block"
+              >Pendidikan Akhlak Utama</span
+            >
+            <h2
+              class="font-display text-3xl md:text-4xl font-bold text-white leading-tight"
+            >
+              Penanaman Adab, Karakter & Akhlakul Karimah
+            </h2>
+            <div
+              class="w-12 h-1 bg-yapini-goldAccent"
+            ></div>
+            <p
+              class="text-slate-300 text-xs md:text-sm font-light leading-relaxed"
+            >
+              Di YAPINI, adab mendahului ilmu. Kami
+              membimbing murid untuk meneladani akhlak
+              Rasulullah SAW dalam berinteraksi sehari-hari,
+              berbakti kepada orang tua, dan cinta sesama
+              makhluk hidup.
+            </p>
+            <p
+              class="text-slate-400 text-xs font-light italic"
+            >
+              *Klik kartu di samping untuk membuka mutiara
+              hikmah dan motivasi belajar islami hari ini!
+            </p>
+          </div>
+
+          <!-- Sisi Kanan: Kartu Flip Interaktif -->
+          <div class="lg:col-span-7 flex justify-center">
+            <div
+              class="w-full max-w-[380px] h-[450px] perspective-1000 cursor-pointer group"
+              onclick="flipWisdomCard()"
+            >
+              <div
+                id="wisdom-card"
+                class="card-inner w-full h-full relative rounded-3xl transition-transform duration-700 transform-style shadow-2xl border border-white/10"
+              >
+                <!-- Bagian Depan (Cover) -->
+                <div
+                  class="card-front absolute inset-0 bg-gradient-to-br from-yapini-neutralDark to-yapini-emeraldMedium p-8 rounded-3xl flex flex-col justify-between border border-yapini-emeraldLight/20"
+                >
+                  <div
+                    class="flex justify-between items-center"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-xl bg-yapini-emeraldLight/10 flex items-center justify-center text-yapini-emeraldLight"
+                    >
+                      <i
+                        data-lucide="book-marked"
+                        class="w-6 h-6"
+                      ></i>
+                    </div>
+                    <span
+                      class="text-[10px] tracking-widest text-yapini-goldAccent uppercase font-bold"
+                      >KARTU ADAB HARIAN</span
+                    >
+                  </div>
+                  <div class="space-y-4">
+                    <p
+                      class="text-slate-300 font-light text-xs"
+                    >
+                      Mutiara Hadits:
+                    </p>
+                    <p
+                      class="text-white font-display text-lg font-bold leading-relaxed italic"
+                    >
+                      "Tiada suatu pemberian yang lebih
+                      utama dari orang tua kepada anaknya
+                      selain adab dan budi pekerti yang
+                      baik."
+                    </p>
+                    <p
+                      class="text-slate-400 text-xs font-medium"
+                    >
+                      — HR. Tirmidzi
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center gap-2 text-yapini-emeraldLight text-xs font-bold uppercase tracking-widest"
+                  >
+                    <span>Sentuh Untuk Balik Kartu</span>
+                    <svg
+                      class="w-4 h-4 animate-bounce"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Bagian Belakang (Isi) -->
+                <div
+                  class="card-back absolute inset-0 bg-gradient-to-br from-yapini-neutralDark to-yapini-skyBlue p-8 rounded-3xl flex flex-col justify-between border border-yapini-skyBlue/30"
+                >
+                  <div
+                    class="flex justify-between items-center"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white"
+                    >
+                      <i
+                        data-lucide="heart"
+                        class="w-6 h-6"
+                      ></i>
+                    </div>
+                    <span
+                      class="text-[10px] tracking-widest text-white/80 uppercase font-bold"
+                      >MUTIARA HIKMAH</span
+                    >
+                  </div>
+                  <div class="space-y-4">
+                    <p
+                      class="text-white/80 font-light text-xs"
+                    >
+                      Kutipan Al-Qur'an (QS. Al-Mujadilah:
+                      11):
+                    </p>
+                    <p
+                      class="text-white font-display text-lg font-bold leading-relaxed"
+                    >
+                      "...Niscaya Allah akan meninggikan
+                      orang-orang yang beriman di antaramu
+                      dan orang-orang yang diberi ilmu
+                      pengetahuan beberapa derajat..."
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center gap-2 text-white/90 text-xs font-bold uppercase tracking-widest"
+                  >
+                    <span>Sentuh Untuk Kembali</span>
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID ACTIVITIES SECTION -->
+    <section
+      id="kegiatan"
+      class="py-24 bg-white relative z-10 border-b border-slate-100"
+    >
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-yapini-emeraldMedium uppercase tracking-[0.25em] text-xs font-bold block mb-4"
+            >Aktivitas & Kreativitas</span
+          >
+          <h2
+            class="font-display text-3xl md:text-4xl font-extrabold text-yapini-emeraldDark"
+          >
+            Dinamika Kehidupan Siswa YAPINI
+          </h2>
+          <div
+            class="w-12 h-1 bg-yapini-skyBlue mx-auto mt-6"
+          ></div>
+        </div>
+
+        <!-- Bento Grid System -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-6 w-full"
+        >
+          <!-- Card 1: Utama (Besar) -->
+          <div
+            class="md:col-span-8 bg-yapini-neutralDark rounded-3xl overflow-hidden relative group aspect-[16/10] shadow-md w-full"
+          >
+            <img
+              src="WhatsApp Image 2025-09-30 at 16.01.30 (1).jpeg"
+              alt="Pramuka & Karakter"
+              class="object-cover w-full h-full opacity-60 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-yapini-neutralDark via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 space-y-2"
+            >
+              <span
+                class="bg-yapini-emeraldLight text-yapini-emeraldDark text-[10px] uppercase tracking-widest font-bold py-1 px-3.5 rounded-full"
+                >Karakter & Kedisiplinan</span
+              >
+              <h3
+                class="font-display text-xl md:text-2xl font-bold text-white"
+              >
+                Latihan Dasar Kepemimpinan (LDK) & Pramuka
+              </h3>
+              <p
+                class="text-slate-300 text-xs font-light max-w-xl"
+              >
+                Membentuk jiwa tangguh, disiplin mandiri,
+                serta kepedulian sosial yang berafiliasi
+                kuat pada akhlak islamiah.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Vertikal (Tinggi) -->
+          <div
+            class="md:col-span-4 bg-yapini-emeraldMedium rounded-3xl overflow-hidden relative group aspect-[4/5] md:aspect-auto shadow-md w-full"
+          >
+            <img
+              src="WhatsApp Image 2025-09-30 at 16.01.30.jpeg"
+              alt="Halaqah Quran"
+              class="object-cover w-full h-[400px] opacity-50 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-yapini-neutralDark via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-6 space-y-2"
+            >
+              <span
+                class="bg-yapini-goldAccent text-yapini-emeraldDark text-[10px] uppercase tracking-widest font-bold py-1 px-3.5 rounded-full"
+                >Tahfidz Intensif</span
+              >
+              <h3
+                class="font-display text-lg font-bold text-white"
+              >
+                Halaqah Qur'an & Adab
+              </h3>
+              <p class="text-slate-300 text-xs font-light">
+                Setiap pagi diawali hafalan mutqin dipandu
+                asatidz bersanad.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Horizontal (Kecil) -->
+          <div
+            class="md:col-span-4 bg-slate-900 rounded-3xl overflow-hidden relative group aspect-[4/3] md:aspect-auto shadow-md w-full"
+          >
+            <img
+              src="Whatsapp Image 2025-09-30 at 16.01.54 (2).jpeg"
+              alt="Field Trip"
+              class="object-cover w-full h-[400px] opacity-60 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-yapini-neutralDark via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-6 space-y-2"
+            >
+              <span
+                class="bg-yapini-skyBlue text-white text-[10px] uppercase tracking-widest font-bold py-1 px-3.5 rounded-full"
+                >STEAM & Sains</span
+              >
+              <h3
+                class="font-display text-lg font-bold text-white"
+              >
+                Rihlah Edukatif Praktis
+              </h3>
+              <p class="text-slate-300 text-xs font-light">
+                Eksplorasi laboratorium alam terbuka dan
+                observatorium astronomi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Horizontal (Panjang) -->
+          <div
+            class="md:col-span-8 bg-yapini-neutralDark rounded-3xl overflow-hidden relative group aspect-[16/10] shadow-md w-full"
+          >
+            <img
+              src="WhatsApp Image 2025-09-30 at 16.01.29.jpeg"
+              alt="Seni Kaligrafi"
+              class="object-cover w-full h-full opacity-60 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-yapini-neutralDark via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 space-y-2"
+            >
+              <span
+                class="bg-purple-500 text-white text-[10px] uppercase tracking-widest font-bold py-1 px-3.5 rounded-full"
+                >Seni & Kreativitas</span
+              >
+              <h3
+                class="font-display text-xl font-bold text-white"
+              >
+                Kaligrafi Kontemporer & Robotika
+              </h3>
+              <p
+                class="text-slate-300 text-xs font-light max-w-lg"
+              >
+                Mengasah belahan otak kreatif melalui seni
+                lukis kaligrafi dan kompetisi pemrograman
+                robot ramah lingkungan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESTASI EMAS SECTION -->
+    <section
+      id="prestasi"
+      class="py-24 bg-yapini-neutralBg relative overflow-hidden"
+    >
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+        >
+          <div class="max-w-xl text-center md:text-left">
+            <span
+              class="text-yapini-emeraldMedium uppercase tracking-[0.25em] text-xs font-bold block mb-4"
+              >Galeri Prestasi Emas</span
+            >
+            <h2
+              class="font-display text-3xl md:text-4xl font-extrabold text-yapini-emeraldDark"
+            >
+              Mencetak Generasi Unggul Berprestasi
+            </h2>
+          </div>
+          <!-- Filter Category Buttons -->
+          <div
+            class="flex flex-wrap gap-2 justify-center"
+            id="achievement-filters"
+          >
+            <button
+              onclick="filterAchievements('all')"
+              class="ach-btn active px-5 py-2.5 text-[10px] uppercase tracking-widest font-bold rounded-xl border border-yapini-emeraldMedium bg-yapini-emeraldMedium text-white transition-all duration-300 focus:outline-none"
+            >
+              Semua
+            </button>
+            <button
+              onclick="filterAchievements('academic')"
+              class="ach-btn px-5 py-2.5 text-[10px] uppercase tracking-widest font-bold rounded-xl border border-slate-300 text-slate-500 hover:border-yapini-emeraldMedium hover:text-yapini-emeraldMedium transition-all duration-300 focus:outline-none"
+            >
+              Akademis
+            </button>
+            <button
+              onclick="filterAchievements('islamic')"
+              class="ach-btn px-5 py-2.5 text-[10px] uppercase tracking-widest font-bold rounded-xl border border-slate-300 text-slate-500 hover:border-yapini-emeraldMedium hover:text-yapini-emeraldMedium transition-all duration-300 focus:outline-none"
+            >
+              Keagamaan
+            </button>
+            <button
+              onclick="filterAchievements('non-academic')"
+              class="ach-btn px-5 py-2.5 text-[10px] uppercase tracking-widest font-bold rounded-xl border border-slate-300 text-slate-500 hover:border-yapini-emeraldMedium hover:text-yapini-emeraldMedium transition-all duration-300 focus:outline-none"
+            >
+              Olahraga & Seni
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Prestasi Grid -->
+        <div
+          id="achievements-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Javascript will load content here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FACILITIES SECTION -->
+    <section
+      id="fasilitas"
+      class="py-24 bg-white relative z-10 border-b border-slate-100"
+    >
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-yapini-skyBlue uppercase tracking-[0.25em] text-xs font-bold block mb-4"
+            >Sarana & Prasarana</span
+          >
+          <h2
+            class="font-display text-3xl md:text-4xl font-extrabold text-yapini-emeraldDark"
+          >
+            Fasilitas Penunjang Pendidikan Kelas Satu
+          </h2>
+          <div
+            class="w-12 h-1 bg-yapini-emeraldLight mx-auto mt-6"
+          ></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full"
+        >
+          <!-- Navigasi Tab Kiri (33.3%) -->
+          <div
+            class="lg:col-span-4 flex flex-col space-y-3 w-full"
+          >
+            <button
+              onclick="switchFacilityTab('masjid')"
+              class="fac-tab-btn active text-left p-5 rounded-2xl border border-yapini-emeraldMedium bg-yapini-emeraldMedium/5 transition-all duration-300 flex items-center justify-between group focus:outline-none"
+              id="btn-fac-masjid"
+            >
+              <div>
+                <h4
+                  class="font-display font-bold text-xs text-yapini-emeraldDark uppercase tracking-wider"
+                >
+                  Masjid Jami Baitul Iman
+                </h4>
+                <p class="text-[10px] text-slate-500 mt-1">
+                  Pusat pembiasaan ibadah & kajian ilmu.
+                </p>
+              </div>
+              <svg
+                class="w-5 h-5 text-yapini-emeraldMedium group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              onclick="switchFacilityTab('kelas')"
+              class="fac-tab-btn text-left p-5 rounded-2xl border border-slate-200 hover:border-yapini-emeraldMedium transition-all duration-300 flex items-center justify-between group focus:outline-none"
+              id="btn-fac-kelas"
+            >
+              <div>
+                <h4
+                  class="font-display font-bold text-xs text-yapini-emeraldDark uppercase tracking-wider"
+                >
+                  Ruang Kelas Smart Multimedia
+                </h4>
+                <p class="text-[10px] text-slate-500 mt-1">
+                  Sistem ber-AC, Interactive Whiteboard &
+                  Ergonomis.
+                </p>
+              </div>
+              <svg
+                class="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              onclick="switchFacilityTab('lab')"
+              class="fac-tab-btn text-left p-5 rounded-2xl border border-slate-200 hover:border-yapini-emeraldMedium transition-all duration-300 flex items-center justify-between group focus:outline-none"
+              id="btn-fac-lab"
+            >
+              <div>
+                <h4
+                  class="font-display font-bold text-xs text-yapini-emeraldDark uppercase tracking-wider"
+                >
+                  Laboratorium STEAM & Komputer
+                </h4>
+                <p class="text-[10px] text-slate-500 mt-1">
+                  Koneksi serat optik berkecepatan tinggi.
+                </p>
+              </div>
+              <svg
+                class="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Display Gambar & Keterangan Kanan (66.6%) -->
+          <div
+            class="lg:col-span-8 bg-yapini-neutralBg p-6 rounded-3xl border border-slate-100 shadow-xl min-h-[420px] flex flex-col justify-between transition-all duration-500 w-full"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl aspect-[16/9] mb-6 bg-slate-900 w-full"
+            >
+              <img
+                id="facility-display-img"
+                src="lapkos.jpg"
+                alt="Fasilitas YAPINI"
+                class="object-cover w-full h-full transition-all duration-700"
+              />
+            </div>
+            <div>
+              <h3
+                id="facility-display-title"
+                class="font-display text-xl md:text-2xl font-bold text-yapini-emeraldDark mb-2"
+              >
+                Nama Sarana
+              </h3>
+              <p
+                id="facility-display-desc"
+                class="text-slate-600 text-xs md:text-sm font-light leading-relaxed"
+              >
+                Penjelasan rinci mengenai sarana pendidikan
+                kami.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PPDB FEE PLANNER SECTION (Beasiswa Dihilangkan) -->
+    <section
+      id="penerimaan"
+      class="py-24 bg-gradient-to-b from-white to-yapini-neutralBg relative overflow-hidden"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-yapini-emeraldMedium uppercase tracking-[0.25em] text-xs font-bold block mb-4"
+            >Informasi Transparansi PPDB</span
+          >
+          <h2
+            class="font-display text-3xl md:text-4xl font-extrabold text-yapini-emeraldDark"
+          >
+            Simulasi Estimasi Biaya PPDB
+          </h2>
+          <p
+            class="text-slate-500 text-xs md:text-sm font-light mt-4 leading-relaxed"
+          >
+            Kami mengedepankan keterbukaan finansial.
+            Gunakan kalkulator simulasi di bawah untuk
+            memperkirakan biaya masuk putra-putri Anda
+            sesuai tingkat sekolah.
+          </p>
+        </div>
+
+        <!-- Interaktif Kalkulator Kardus -->
+        <div
+          class="bg-gradient-to-br from-yapini-neutralDark to-yapini-emeraldDark rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-white/10 w-full"
+        >
+          <div
+            class="absolute -right-24 -top-24 w-64 h-64 bg-yapini-emeraldLight/10 rounded-full blur-3xl pointer-events-none"
+          ></div>
+
+          <div
+            class="flex items-center gap-3 mb-8 border-b border-white/10 pb-4"
+          >
+            <i
+              data-lucide="wallet"
+              class="text-yapini-emeraldLight w-6 h-6"
+            ></i>
+            <h3
+              class="font-display text-lg text-white font-bold uppercase tracking-wider"
+            >
+              Kalkulator Rencana Pendidikan
+            </h3>
+          </div>
+
+          <!-- Step 1: Pilih Tingkat -->
+          <div class="mb-8">
+            <label
+              class="block text-[10px] uppercase tracking-widest text-slate-400 mb-4 font-bold"
+              >1. Pilih Tingkat Sekolah</label
+            >
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-4"
+            >
+              <label class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="jenjang"
+                  value="sd"
+                  checked
+                  onchange="calculateAdmissionCost()"
+                  class="sr-only peer"
+                />
+                <div
+                  class="border border-white/10 peer-checked:border-yapini-emeraldLight peer-checked:bg-yapini-emeraldMedium/30 p-5 rounded-2xl transition-all duration-300"
+                >
+                  <span
+                    class="block font-bold text-xs text-white uppercase tracking-wider"
+                    >Madrasah Ibtidaiyah (MI)</span
+                  >
+                  <span
+                    class="block text-[10px] text-slate-400 mt-1"
+                    >Uang Pangkal: Rp 8.500.000</span
+                  >
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="jenjang"
+                  value="smp"
+                  onchange="calculateAdmissionCost()"
+                  class="sr-only peer"
+                />
+                <div
+                  class="border border-white/10 peer-checked:border-yapini-emeraldLight peer-checked:bg-yapini-emeraldMedium/30 p-5 rounded-2xl transition-all duration-300"
+                >
+                  <span
+                    class="block font-bold text-xs text-white uppercase tracking-wider"
+                    >SMP Nurul</span
+                  >
+                  <span
+                    class="block text-[10px] text-slate-400 mt-1"
+                    >Uang Pangkal: Rp 10.000.000</span
+                  >
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Hasil & Aksi -->
+          <div
+            class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
+          >
+            <div class="text-center md:text-left">
+              <span
+                class="text-[9px] uppercase tracking-widest text-slate-400 font-bold"
+                >Estimasi Total Investasi Pendidikan</span
+              >
+              <h4
+                id="calc-total-display"
+                class="font-display text-2xl md:text-4xl font-extrabold text-yapini-emeraldLight mt-1"
+              >
+                Rp 8.500.000
+              </h4>
+              <span
+                class="text-[9px] text-slate-400 block mt-1"
+                >*Uang Pangkal mencakup buku paket tahun
+                ke-1, seragam lengkap, & SPP bulan
+                pertama.</span
+              >
+            </div>
+
+            <a
+              id="admission-cta"
+              href="#"
+              target="_blank"
+              class="w-full md:w-auto bg-gradient-to-r from-yapini-emeraldLight to-teal-400 text-yapini-emeraldDark font-bold tracking-widest text-xs uppercase px-8 py-4.5 rounded-xl shadow-lg shadow-yapini-emeraldLight/20 flex items-center justify-center gap-2 hover:scale-102 transition-transform duration-300"
+            >
+              <i
+                data-lucide="phone-forwarded"
+                class="w-4 h-4"
+              ></i>
+              <span>Diskusi via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CONTACT & REGISTRATION FORM -->
+    <section
+      id="kontak"
+      class="py-24 bg-white relative z-10"
+    >
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-yapini-skyBlue uppercase tracking-[0.25em] text-xs font-bold block mb-4"
+            >Konsultasi Terbuka</span
+          >
+          <h2
+            class="font-display text-3xl md:text-4xl font-extrabold text-yapini-emeraldDark"
+          >
+            Formulir Pengajuan Calon Siswa Baru
+          </h2>
+          <div
+            class="w-12 h-0.5 bg-yapini-emeraldMedium mx-auto mt-6"
+          ></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-12 w-full"
+        >
+          <!-- Sisi Form Input -->
+          <div
+            class="md:col-span-7 bg-yapini-neutralBg p-8 rounded-3xl border border-slate-100 shadow-xl w-full"
+          >
+            <h3
+              class="font-display text-base mb-6 text-yapini-emeraldDark font-bold border-b border-slate-200 pb-3"
+            >
+              Formulir Digital PPDB
+            </h3>
+
+            <form
+              id="admission-form"
+              onsubmit="handleAdmissionSubmit(event)"
+              class="space-y-6"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Pendaftaran PPDB Baru - YPI Nurul Iman"
+              />
+
+              <div>
+                <label
+                  class="block text-[10px] uppercase tracking-wider text-slate-500 mb-2 font-bold"
+                  for="parent-name"
+                >
+                  Nama Wali Murid
+                  <span class="text-red-500">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="parent-name"
+                  name="Nama Wali Murid"
+                  required
+                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-yapini-emeraldMedium text-xs text-slate-800 font-medium transition-all"
+                  placeholder="Masukkan Nama Wali Murid"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-[10px] uppercase tracking-wider text-slate-500 mb-2 font-bold"
+                  for="child-name"
+                >
+                  Nama Calon Siswa
+                  <span class="text-red-500">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="child-name"
+                  name="Nama Calon Siswa"
+                  required
+                  class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-yapini-emeraldMedium text-xs text-slate-800 font-medium transition-all"
+                  placeholder="Masukkan Nama Murid"
+                />
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block text-[10px] uppercase tracking-wider text-slate-500 mb-2 font-bold"
+                    for="selected-grade"
+                  >
+                    Tingkat Sekolah
+                    <span class="text-red-500">*</span>
+                  </label>
+
+                  <select
+                    id="selected-grade"
+                    name="Tingkat Sekolah"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-yapini-emeraldMedium text-xs text-slate-800 font-medium"
+                  >
+                    <option value="MI">MI</option>
+                    <option value="SMP">SMP</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    class="block text-[10px] uppercase tracking-wider text-slate-500 mb-2 font-bold"
+                    for="parent-phone"
+                  >
+                    No. WhatsApp Wali Murid
+                    <span class="text-red-500">*</span>
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="parent-phone"
+                    name="Nomor WhatsApp"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-yapini-emeraldMedium text-xs text-slate-800 font-medium"
+                    placeholder="Contoh: 08123456789"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block text-[10px] uppercase tracking-wider text-slate-500 mb-2 font-bold"
+                    for="parent-email"
+                  >
+                    Alamat Email Wali Murid
+                    <span class="text-red-500">*</span>
+                  </label>
+
+                  <input
+                    type="email"
+                    id="parent-email"
+                    name="Alamat Email"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-yapini-emeraldMedium text-xs text-slate-800 font-medium transition-all"
+                    placeholder="Masukkan Alamat Email"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-[10px] uppercase tracking-wider text-slate-500 mb-2 font-bold"
+                    for="child-gender"
+                  >
+                    Jenis Kelamin Calon Siswa
+                    <span class="text-red-500">*</span>
+                  </label>
+
+                  <select
+                    id="child-gender"
+                    name="Jenis Kelamin"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-yapini-emeraldMedium text-xs text-slate-800 font-medium"
+                  >
+                    <option value="" disabled selected>
+                      Pilih Jenis Kelamin
+                    </option>
+
+                    <option value="Laki-laki">
+                      Laki-laki
+                    </option>
+
+                    <option value="Perempuan">
+                      Perempuan
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-yapini-emeraldMedium to-yapini-emeraldLight text-white font-bold tracking-widest text-xs uppercase py-4 rounded-xl shadow-lg hover:opacity-95 transition-all"
+              >
+                Kirim Formulir Pendaftaran
+              </button>
+            </form>
+          </div>
+
+          <!-- Sisi Kontak -->
+          <div
+            class="md:col-span-5 flex flex-col justify-between space-y-6 w-full"
+          >
+            <div
+              class="bg-yapini-neutralBg p-8 rounded-3xl border border-slate-100 shadow-xl space-y-6 w-full"
+            >
+              <h3
+                class="font-display text-base text-yapini-emeraldDark font-bold border-b border-slate-200 pb-3"
+              >
+                Hubungi Kami
+              </h3>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-10 h-10 rounded-xl bg-yapini-emeraldLight/10 flex items-center justify-center text-yapini-emeraldMedium flex-shrink-0"
+                >
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span
+                    class="block text-[9px] uppercase tracking-widest text-slate-400 font-bold"
+                    >Email Panitia PPDB</span
+                  >
+                  <span
+                    class="text-xs text-yapini-emeraldDark font-bold"
+                    >azizahfauzi1@gmail.com</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-yapini-royalBlue flex-shrink-0"
+                >
+                  <i
+                    data-lucide="phone"
+                    class="w-5 h-5"
+                  ></i>
+                </div>
+                <div>
+                  <span
+                    class="block text-[9px] uppercase tracking-widest text-slate-400 font-bold"
+                    >No. Telpon Sekretariat</span
+                  >
+                  <span
+                    class="text-xs text-yapini-emeraldDark font-bold"
+                    >0813-3672-4198</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-10 h-10 rounded-xl bg-yapini-emeraldLight/10 flex items-center justify-center text-yapini-emeraldMedium flex-shrink-0"
+                >
+                  <i
+                    data-lucide="map-pin"
+                    class="w-5 h-5"
+                  ></i>
+                </div>
+                <div>
+                  <span
+                    class="block text-[9px] uppercase tracking-widest text-slate-400 font-bold"
+                    >Lokasi Kampus Utama</span
+                  >
+                  <span
+                    class="text-xs text-yapini-emeraldDark font-bold"
+                    >Jl. Masjid, Kel. Sudimara Timur, Kec.
+                    Ciledug, Kota Tangerang, Banten,
+                    Indonesia</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Hubungan Konsultasi Tatap Muka -->
+            <div
+              class="bg-gradient-to-r from-yapini-emeraldMedium/10 to-yapini-skyBlue/10 p-8 rounded-3xl border border-yapini-emeraldMedium/15 relative overflow-hidden w-full"
+            >
+              <div
+                class="absolute -right-12 -bottom-12 w-28 h-28 bg-yapini-emeraldLight/10 rounded-full blur-2xl"
+              ></div>
+              <h4
+                class="font-display text-sm text-yapini-emeraldDark font-bold mb-2"
+              >
+                Ingin Tatap Muka?
+              </h4>
+              <p
+                class="text-[11px] text-slate-500 leading-relaxed mb-4"
+              >
+                Kami sangat senang menyambut kehadiran Anda
+                di lingkungan sekolah kami untuk melihat
+                proses kegiatan belajar harian secara
+                langsung.
+              </p>
+              <a
+                href="https://wa.me/6281336724198"
+                target="_blank"
+                class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-yapini-emeraldDark hover:text-yapini-skyBlue transition-colors"
+              >
+                <span>Atur Janji Kunjungan</span>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM FOOTER -->
+    <footer
+      class="bg-yapini-neutralDark text-slate-300 py-16 border-t border-white/5 relative z-10 text-xs font-light"
+    >
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-8 pb-12 border-b border-white/5"
+        >
+          <div>
+            <img
+              src="logosekolah.png"
+              alt="YAPINI Logo"
+              class="h-12 md:h-[180px] w-auto object-contain mb-4"
+              onerror="
+                this.src =
+                  'https://placehold.co/180x45/0D5C34/ffffff?text=YAPINI'
+              "
+            />
+            <p class="text-[11px] text-slate-400 max-w-sm">
+              Membina generasi muslim cerdas dan berkarakter
+              kepemimpinan global berbasis adab Al-Qur'an.
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="https://wa.me/6281336724198"
+              target="_blank"
+              class="hover:text-yapini-emeraldLight transition-colors"
+              ><i
+                data-lucide="instagram"
+                class="w-5 h-5"
+              ></i
+            ></a>
+            <a
+              href="https://wa.me/6281336724198"
+              target="_blank"
+              class="hover:text-yapini-emeraldLight transition-colors"
+              ><i data-lucide="facebook" class="w-5 h-5"></i
+            ></a>
+            <a
+              href="https://wa.me/6281336724198 "
+              target="_blank"
+              class="hover:text-yapini-emeraldLight transition-colors"
+              ><i data-lucide="youtube" class="w-5 h-5"></i
+            ></a>
+          </div>
+        </div>
+
+        <div
+          class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px]"
+        >
+          <p>
+            &copy; 2026 Yayasan Pendidikan Islam Nurul Iman
+            (YAPINI). Hak Cipta Dilindungi.
+          </p>
+          <div class="flex space-x-6 text-slate-500">
+            <a href="#" class="hover:text-white"
+              >Syarat & Ketentuan</a
+            >
+            <a href="#" class="hover:text-white"
+              >Kebijakan Privasi</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION (Premium Glass Design) -->
+    <div
+      id="toast-message"
+      class="fixed bottom-6 right-6 bg-yapini-neutralDark/95 backdrop-blur-md text-white border-l-4 border-yapini-emeraldLight py-4 px-6 shadow-2xl z-50 transform translate-y-24 opacity-0 transition-all duration-500 max-w-sm rounded-xl border border-white/5"
+    >
+      <div class="flex items-center gap-3">
+        <i
+          data-lucide="check-circle"
+          class="text-yapini-emeraldLight w-5 h-5 flex-shrink-0"
+        ></i>
+        <p
+          id="toast-text"
+          class="text-[10px] font-bold tracking-widest uppercase text-slate-200"
+        ></p>
+      </div>
+    </div>
+
+    <!-- CORE JAVASCRIPT LOGIC -->
+    <script>
+      // Database Prestasi
+      const achievementsData = [
+        {
+          id: 'ach-01',
+          title:
+            'Medali Emas Olimpiade Matematika Nasional',
+          category: 'academic',
+          student: 'Zulkipli R. (SMA Islam Nurul Iman)',
+          image: 'paskibra.jpeg',
+          desc: 'Memperoleh peringkat 1 nasional, mengungguli ratusan sekolah internasional se-Indonesia.',
+        },
+        {
+          id: 'ach-02',
+          title:
+            'Juara Umum Musabaqah Hifzhil Qur’an 5 Juz',
+          category: 'islamic',
+          student:
+            'Muhammad Al-Fatih (MI Islam Nurul Iman)',
+          image:
+            'WhatsApp Image 2025-09-30 at 16.01.30.jpeg',
+          desc: 'Hafalan tajwid, makhraj, dan kelancaran bacaan terbaik tingkat Provinsi DKI Jakarta.',
+        },
+        {
+          id: 'ach-03',
+          title:
+            'Juara 2 Kompetisi Robotika Ramah Lingkungan',
+          category: 'academic',
+          student: 'Tim Robotika YAPINI (SD & SMP)',
+          image:
+            'whatsapp image 2025-09-30 at 16.01.54.jpeg',
+          desc: 'Menciptakan robot pendeteksi kelayakan air berbasis mikrokontroler ramah lingkungan.',
+        },
+        {
+          id: 'ach-04',
+          title: 'Juara 1 Pencak Silat Piala Menpora',
+          category: 'non-academic',
+          student: 'Rayhan S. (SMA Islam Nurul Iman)',
+          image: 'silat.jpeg',
+          desc: 'Memenangkan medali emas tanding seni silat kategori remaja tingkat nasional.',
+        },
+        {
+          id: 'ach-05',
+          title:
+            'Pidato Terbaik Bahasa Arab Tingkat Wilayah',
+          category: 'islamic',
+          student:
+            'Fatimah Az-Zahra (SMP Islam Nurul Iman)',
+          image: 'guruolahraga.jpeg',
+          desc: 'Membawakan tema kepemimpinan islam modern dengan kefasihan tata bahasa Arab yang memukau.',
+        },
+      ];
+
+      // Database Sarana & Prasarana
+      const facilityData = {
+        masjid: {
+          title: 'Masjid Jami Baitul Iman YAPINI',
+          desc: 'Jantung rohani sekolah tempat berlangsungnya shalat fardhu berjamaah harian, hafalan tahfidz mandiri, kajian hadits mutqin, dan penanaman adab serta budaya akhlak luhur sejak dini.',
+          image: 'lapkos.jpg',
+        },
+        kelas: {
+          title:
+            'Smart Classroom & Laboratorium Multimedia',
+          desc: 'Setiap ruang kelas dirancang dengan interior yang modern, AC sejuk, tempat duduk ergonomis, pencahayaan sehat, dan dilengkapi dengan Smart Interactive TV berukuran besar untuk mendukung pembelajaran visual aktif.',
+          image: 'ruang kelas.jpeg',
+        },
+        lab: {
+          title:
+            'Laboratorium Sains Terpadu & Riset Komputer',
+          desc: 'Menyediakan perangkat komputer modern berspesifikasi tinggi, robotika kit edukasi, laboratorium biokimia dasar, serta konektivitas internet serat optik berkecepatan tinggi guna mendukung riset digital siswa.',
+          image: 'lapanganolahraga.jpeg',
+        },
+      };
+
+      // Pemuatan Halaman Pertama Kali
+      window.onload = function () {
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+        renderAchievements('all');
+        switchFacilityTab('masjid');
+        calculateAdmissionCost();
+      };
+
+      // Toggle Flip Card Hikmah
+      function flipWisdomCard() {
+        const card = document.getElementById('wisdom-card');
+        card.classList.toggle('card-flipped');
+      }
+
+      // Drawer Navigasi Mobile
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('translate-x-full')) {
+          menu.classList.remove(
+            'translate-x-full',
+            'invisible',
+          );
+        } else {
+          menu.classList.add(
+            'translate-x-full',
+            'invisible',
+          );
+        }
+      }
+
+      // Respons Efek Navbar Saat Scroll
+      window.addEventListener('scroll', () => {
+        const header =
+          document.getElementById('main-header');
+        if (window.scrollY > 40) {
+          header.classList.add(
+            'py-2',
+            'shadow-yapini-neutralDark/50',
+          );
+          header.classList.remove('py-3');
+        } else {
+          header.classList.remove(
+            'py-2',
+            'shadow-yapini-neutralDark/50',
+          );
+          header.classList.add('py-3');
+        }
+      });
+
+      // Tab Fasilitas Control
+      function switchFacilityTab(tabKey) {
+        const data = facilityData[tabKey];
+        if (!data) return;
+
+        // Nonaktifkan semua button tab
+        const buttons =
+          document.querySelectorAll('.fac-tab-btn');
+        buttons.forEach((btn) => {
+          btn.classList.remove(
+            'active',
+            'border-yapini-emeraldMedium',
+            'bg-yapini-emeraldMedium/5',
+          );
+          btn.classList.add('border-slate-200');
+        });
+
+        // Aktifkan button terpilih
+        const activeBtn = document.getElementById(
+          `btn-fac-${tabKey}`,
+        );
+        if (activeBtn) {
+          activeBtn.classList.add(
+            'active',
+            'border-yapini-emeraldMedium',
+            'bg-yapini-emeraldMedium/5',
+          );
+          activeBtn.classList.remove('border-slate-200');
+        }
+
+        // Transisi Visual Gambar & Teks
+        const img = document.getElementById(
+          'facility-display-img',
+        );
+        const title = document.getElementById(
+          'facility-display-title',
+        );
+        const desc = document.getElementById(
+          'facility-display-desc',
+        );
+
+        img.style.opacity = 0;
+        title.style.opacity = 0;
+        desc.style.opacity = 0;
+
+        setTimeout(() => {
+          img.src = data.image;
+          img.alt = data.title;
+          title.innerText = data.title;
+          desc.innerText = data.desc;
+
+          img.style.opacity = 1;
+          title.style.opacity = 1;
+          desc.style.opacity = 1;
+        }, 180);
+      }
+
+      // Render Grid Prestasi Dinamis
+      function renderAchievements(filter) {
+        const grid = document.getElementById(
+          'achievements-grid',
+        );
+        if (!grid) return;
+        grid.innerHTML = '';
+
+        const filteredData =
+          filter === 'all'
+            ? achievementsData
+            : achievementsData.filter(
+                (item) => item.category === filter,
+              );
+
+        filteredData.forEach((item) => {
+          const card = `
+                    <div class="bg-white rounded-3xl overflow-hidden group border border-slate-100 hover:border-yapini-emeraldLight/30 transition-all duration-300 shadow-md hover:shadow-xl">
+                        <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
+                            <img src="${item.image}" alt="${item.title}" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-102">
+                            <span class="absolute top-4 left-4 bg-yapini-neutralDark/90 backdrop-blur-sm text-white text-[9px] uppercase tracking-widest font-bold py-1 px-3.5 rounded-full border border-white/10">
+                                ${item.category === 'academic' ? 'Akademis' : item.category === 'islamic' ? 'Keagamaan' : 'Olahraga & Seni'}
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="text-[9px] text-yapini-skyBlue uppercase tracking-wider font-semibold block">${item.student}</span>
+                            <h3 class="font-display text-base text-yapini-emeraldDark font-bold group-hover:text-yapini-emeraldMedium transition-colors duration-300">${item.title}</h3>
+                            <p class="text-slate-500 text-xs leading-relaxed font-light">${item.desc}</p>
+                        </div>
+                    </div>
+                `;
+          grid.innerHTML += card;
+        });
+      }
+
+      // Filter Prestasi Menu Action
+      function filterAchievements(category) {
+        const buttons = document.querySelectorAll(
+          '#achievement-filters button',
+        );
+        buttons.forEach((btn) => {
+          btn.classList.remove(
+            'active',
+            'bg-yapini-emeraldMedium',
+            'text-white',
+          );
+          btn.classList.add(
+            'border-slate-300',
+            'text-slate-500',
+            'hover:border-yapini-emeraldMedium',
+            'hover:text-yapini-emeraldMedium',
+          );
+        });
+
+        event.currentTarget.classList.add(
+          'active',
+          'bg-yapini-emeraldMedium',
+          'text-white',
+        );
+        event.currentTarget.classList.remove(
+          'border-slate-300',
+          'text-slate-500',
+          'hover:border-yapini-emeraldMedium',
+          'hover:text-yapini-emeraldMedium',
+        );
+
+        renderAchievements(category);
+      }
+
+      // Perhitungan Simulasi Biaya PPDB Terbuka (Tanpa Potongan Beasiswa)
+      function calculateAdmissionCost() {
+        const jenjangElement = document.querySelector(
+          'input[name="jenjang"]:checked',
+        );
+        if (!jenjangElement) return;
+
+        let basePrice = 8500000;
+        let labelJenjang = 'SD Islam Nurul Iman';
+        const jenjang = jenjangElement.value;
+
+        if (jenjang === 'sd') {
+          basePrice = 8500000;
+          labelJenjang = 'SD Islam Nurul Iman';
+        } else if (jenjang === 'smp') {
+          basePrice = 10000000;
+          labelJenjang = 'SMP Islam Nurul Iman';
+        } else if (jenjang === 'sma') {
+          basePrice = 12000000;
+          labelJenjang = 'SMA Islam Nurul Iman';
+        }
+
+        const finalPrice = basePrice;
+
+        // Update Tampilan UI
+        const totalDisplay = document.getElementById(
+          'calc-total-display',
+        );
+        totalDisplay.innerText = new Intl.NumberFormat(
+          'id-ID',
+          {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0,
+          },
+        ).format(finalPrice);
+
+        // Perbarui Draf Link WhatsApp
+        const waText = `Assalamu'alaikum Admin YAPINI, saya menghitung estimasi biaya masuk sekolah untuk calon siswa di *${labelJenjang}*.\n\n*Estimasi Biaya Masuk:* ${new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(finalPrice)}*.\n\nMohon informasi syarat pendaftaran lengkap. Terimakasih.`;
+
+        document.getElementById('admission-cta').href =
+          `https://wa.me/6281336724198?text=${encodeURIComponent(waText)}`;
+      }
+
+      // Pengiriman Formulir Pendaftaran Online
+      async function handleAdmissionSubmit(event) {
+        event.preventDefault();
+
+        const data = {
+          namaWali:
+            document.getElementById('parent-name').value,
+
+          namaSiswa:
+            document.getElementById('child-name').value,
+
+          tingkat: document.getElementById('selected-grade')
+            .value,
+
+          whatsapp:
+            document.getElementById('parent-phone').value,
+
+          email:
+            document.getElementById('parent-email').value,
+
+          jenisKelamin:
+            document.getElementById('child-gender').value,
+        };
+
+        try {
+          const response = await fetch(
+            'https://script.google.com/macros/s/AKfycbyA2zshOPDZpsaB6VOFhE-f2nWjhA17fyOdtd_CkLNX2qNJ4B6I3xDIQBiXO5TMq9o/exec',
+            {
+              method: 'POST',
+              body: JSON.stringify(data),
+            },
+          );
+
+          if (response.ok) {
+            alert('Pendaftaran berhasil dikirim!');
+
+            document
+              .getElementById('admission-form')
+              .reset();
+          } else {
+            alert('Gagal mengirim data.');
+          }
+        } catch (error) {
+          alert('Terjadi kesalahan saat mengirim data.');
+          console.error(error);
+        }
+      }
+
+      // Tampilkan Toast Notifikasi
+      function showToast(text) {
+        const toast =
+          document.getElementById('toast-message');
+        document.getElementById('toast-text').innerText =
+          text;
+
+        toast.classList.remove(
+          'translate-y-24',
+          'opacity-0',
+        );
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(() => {
+          toast.classList.add(
+            'translate-y-24',
+            'opacity-0',
+          );
+          toast.classList.remove(
+            'translate-y-0',
+            'opacity-100',
+          );
+        }, 3500);
+      }
+    </script>
+  </body>
+</html>
